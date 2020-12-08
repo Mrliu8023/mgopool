@@ -34,7 +34,7 @@ func (p *leaky) Get() *mgo.Session {
 		return s
 	default:
 		// if freeList is empty, Copy a new session
-		return p.base.Copy()
+		return p.base.Clone()
 	}
 }
 
